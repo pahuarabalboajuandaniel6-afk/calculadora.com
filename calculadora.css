@@ -1,0 +1,95 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fondo del body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f5f5;
+}
+
+/* Contenedor de la calculadora */
+.calculadora {
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    width: 300px;
+}
+
+/* Pantalla */
+.pantalla {
+    background: #000;
+    color: #0f0;
+    font-size: 2rem;
+    text-align: right;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow-x: auto;
+}
+
+/* Contenedor de botones */
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+/* Estilo general de botones */
+button {
+    padding: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Hover general */
+button:hover {
+    opacity: 0.9;
+}
+
+/* Botones de funciones extras */
+.boton-func {
+    background: #555;
+    color: #fff;
+}
+
+/* Botón AC */
+.boton-ac {
+    background: #e74c3c;
+    color: #fff;
+}
+
+/* Botones de operaciones */
+.boton-op {
+    background: #f39c12;
+    color: #fff;
+}
+
+/* Botón igual */
+.boton-igual {
+    background: #2ecc71;
+    color: #fff;
+    grid-row: span 2;
+}
+
+/* Botón cero más ancho */
+.cero {
+    grid-column: span 2;
+}
+
+/* Botón de números */
+button:not(.boton-func):not(.boton-op):not(.boton-igual):not(.boton-ac) {
+    background: #333;
+    color: #fff;
+}
